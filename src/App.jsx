@@ -1,11 +1,8 @@
-import {useTheme} from "next-themes";
-import { useEffect, useState } from "react";
 import './App.css'
 import Topbar from "./components/Topbar";
 import Bottombar from "./components/Bottombar";
 import { Outlet } from "react-router-dom";
-import Postcard from "./components/Postcard";
-import Home from "./components/Home";
+
 
 
 function App() {
