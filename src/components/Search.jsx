@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import Postcard from './Postcard';
+import { Helmet } from 'react-helmet';
 import { fetchMovie, getMoive } from '../Redux/feature/Moive/MovieSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -27,6 +28,10 @@ function Search() {
   return (
 
     <div className='flex flex-1 items-center justify-center'>
+      <Helmet>
+      <meta charSet="utf-8" />
+                <title>{search}-MovieInfo</title>
+      </Helmet>
       <div className='grid  items-center grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:mx-32 lg:gap-6 md:gap-8 gap-5 md:mx-16 mx-5 mt-10'>
         {
           movies.map((movie, id) => {

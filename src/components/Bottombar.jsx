@@ -12,6 +12,9 @@ function Bottombar() {
     if (pathname.includes('/details')) {
       setHidden(true);
     }
+    else{
+      setHidden(false)
+    }
   }, [pathname])
 
   const dispatch = useDispatch()

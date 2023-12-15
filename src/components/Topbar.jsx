@@ -23,7 +23,7 @@ export default function Topbar() {
   
 
   return (
-    <Navbar isBordered shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isBordered onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

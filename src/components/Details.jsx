@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { confi } from '../conf';
+import { Helmet } from 'react-helmet';
 import YouTube from 'react-youtube';
 import { getMoive } from '../Redux/feature/Moive/MovieSlice';
 import { Chip, Image } from '@nextui-org/react';
@@ -39,6 +40,10 @@ function Details() {
   }, [id])
   return (
     <div className='w-screen h-full' >
+      <Helmet>
+      <meta charSet="utf-8" />
+                <title>details-MovieInfo</title>
+      </Helmet>
       <div className=' mx-3 md:mx-5 lg:mx-10'>
         <div className='flex justify-between mt-5'>
           <div className='  mb-3'>

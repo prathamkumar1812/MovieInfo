@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Postcard from './Postcard'
-
-
+import {Helmet} from 'react-helmet'
 import { CircularProgress, Spinner } from "@nextui-org/react";
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
@@ -34,6 +33,10 @@ function Home() {
   return (
     loader?<Loader/>:
     <div className='flex flex-1 items-center justify-center'>
+      <Helmet>
+      <meta charSet="utf-8" />
+                <title>Home-MovieInfo</title>
+      </Helmet>
       <div className='grid  items-center grid-cols-1 lg:grid-cols-4 md:grid-cols-2 lg:mx-32 lg:gap-6 md:gap-8 gap-5 md:mx-16 mx-5 mt-10'>
         {
           movies.map((movie, id) => {
